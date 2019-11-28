@@ -29,6 +29,13 @@ public class EjerciciosBasicosDeJava {
         }
         return 0;
     }
+    
+    public boolean tercerEjercicio(int num, boolean sino) {
+        if(sino){
+            return true;
+        }
+        return false;
+    }
 
     /**
      * @param args the command line arguments
