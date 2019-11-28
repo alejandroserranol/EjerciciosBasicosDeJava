@@ -11,8 +11,8 @@ public class EjerciciosBasicosDeJava {
         return numeroBellotas >= 40 && numeroBellotas <= 60 || finDeSemana;
     }
 
-    public int multa(int velocidad, boolean cumpleaños) {
-        if (cumpleaños) {
+    public int multa(int velocidad, boolean birthday) {
+        if (birthday) {
             if (velocidad > 65 && velocidad <= 85) {
                 return 1;
             }
@@ -30,9 +30,9 @@ public class EjerciciosBasicosDeJava {
         return 0;
     }
     
-    public boolean tercerEjercicio(int num, boolean sino) {
-        if(sino){
-            return true;
+    public boolean muyVanidoso(int numero) {
+        if(numero % 11 == 0 || (numero-1)%11 ==0){
+            return true;        
         }
         return false;
     }
@@ -57,6 +57,14 @@ public class EjerciciosBasicosDeJava {
         System.out.println("Señor agente, ¿me ha puesto una multa? -> " + ejercicios.multa(60, false));
         System.out.println("Señor agente, ¿me ha puesto una multa? -> " + ejercicios.multa(65, false));
         System.out.println("Señor agente, ¿me ha puesto una multa? -> " + ejercicios.multa(65, true));
+        
+        System.out.println("");
+        
+            //Tercer ejercicio
+        System.out.println("Múltiplo de 11");
+        System.out.println("¿Es múltiplo de 11 o es uno más de un múltiplo de 11? -> " + ejercicios.muyVanidoso(22));
+        System.out.println("¿Es múltiplo de 11 o es uno más de un múltiplo de 11? -> " + ejercicios.muyVanidoso(23));
+        System.out.println("¿Es múltiplo de 11 o es uno más de un múltiplo de 11? -> " + ejercicios.muyVanidoso(24));
         
         
     }
