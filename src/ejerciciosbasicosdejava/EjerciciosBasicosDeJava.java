@@ -76,6 +76,34 @@ public class EjerciciosBasicosDeJava {
         }
         return false;
     }
+    
+    public boolean menos20(int a) {
+        if ( (a+1) % 20 == 0 || (a+2) % 20 == 0 ) {
+            return true;
+        }
+        return false;
+    }
+    
+    public int loteria(int a, int b, int c) {
+        if(a==b && a==c && a==2){
+            return 10;        
+        }
+        if(a==b && a==c && a!=2){
+            return 5;        
+        }
+        if(a != b && a != c ){
+            return 1;        
+        }
+        return 0;
+    }
+    
+    public int withoutDoubles(int a, int b, boolean equals) {
+        if(equals && a==b){
+            return a+b+1;
+        }
+       
+        return a+b;
+    }
 
     /**
      * @param args the command line arguments
@@ -129,6 +157,28 @@ public class EjerciciosBasicosDeJava {
         System.out.println("Múltiplo múltiple -> " + ejercicios.multiploMultiple(3));
         System.out.println("Múltiplo múltiple -> " + ejercicios.multiploMultiple(10));
         System.out.println("Múltiplo múltiple -> " + ejercicios.multiploMultiple(15));
+        
+        //Octavio ejercicio
+        System.out.println("");
+        System.out.println("menos20");        
+        System.out.println("Múltiplo múltiple -> " + ejercicios.menos20(18));
+        System.out.println("Múltiplo múltiple -> " + ejercicios.menos20(19));
+        System.out.println("Múltiplo múltiple -> " + ejercicios.menos20(20));
+        
+        //Noveno ejercicio
+        System.out.println("");
+        System.out.println("loteria");
+        System.out.println("¿Cuánto he ganado? -> " + ejercicios.loteria(2, 2, 2));
+        System.out.println("¿Cuánto he ganado? -> " + ejercicios.loteria(2, 2, 1));
+        System.out.println("¿Cuánto he ganado? -> " + ejercicios.loteria(0, 0, 0));
+        
+         //Decimo ejercicio
+        System.out.println("");
+        System.out.println("withoutDoubles");
+        System.out.println("¿withoutDoubles? -> " + ejercicios.withoutDoubles(2, 3, true));
+        System.out.println("¿withoutDoubles? -> " + ejercicios.withoutDoubles(3, 3, true));
+        System.out.println("¿withoutDoubles? -> " + ejercicios.withoutDoubles(3, 3, false));
+        System.out.println("¿withoutDoubles? -> " + ejercicios.withoutDoubles(6, 6, true));
 
     }
 
